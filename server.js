@@ -20,7 +20,7 @@ const pool = new Pool({
   port: 5432,
 });
 
-app.post("/registro", async (req, res) => {
+app.post("/app/registro", async (req, res) => {
   try {
     const { username, email, Password } = req.body;
     const salt = await bcrypt.genSalt();
