@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import Nav from "../nav";
+import Nav from "app/nav";
 
 function Configuracion() {
     return (
