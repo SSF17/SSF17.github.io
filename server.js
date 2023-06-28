@@ -1,6 +1,4 @@
 import express from "express";
-import http from "http";
-import bodyParser from "body-parser";
 import { Pool } from "pg";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
@@ -9,7 +7,6 @@ import { jwtTokens } from "./jwtUtils";
 
 const app = express();
 app.use(express.json());
-app.use(bodyParser.urlencoded({ extended: true }));
 
 const pool = new Pool({
   host: '3.239.15.221',
@@ -21,13 +18,13 @@ const pool = new Pool({
 
 app.post("/app/registro", async (req, res) => {
   try {
-    const { username, email, password } = req.body;
+    const { name, email, password } = req.body;
     const salt = await bcrypt.genSalt();
     const hashedPassword = await bcrypt.hash(password, salt);
 
     pool.query(
       "INSERT INTO users (username, email, password) VALUES ($1, $2, $3) RETURNING *",
-      [username, email, hashedPassword],
+      [name, email, hashedPassword],
       (error, results) => {
         if (error) {
           throw error;
@@ -65,11 +62,8 @@ app.post("/login", async (req, res) => {
   }
 });
 
-const server = http.createServer(app);
-
-const hostname = "localhost";
 const port = process.env.PORT || 3000;
 
-server.listen(port, () => {
-  console.log(`Servidor escuchando en http://${hostname}:${port}`);
+app.listen(port, () => {
+  console.log(`Servidor escuchando en el puerto ${port}`);
 });
