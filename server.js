@@ -1,4 +1,3 @@
-
 import express from "express";
 import http from "http";
 import bodyParser from "body-parser";
@@ -13,7 +12,7 @@ app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const pool = new Pool({
-  host: '44.198.157.185',
+  host: '3.239.15.221',
   user: 'postgres',
   password: 'postgres',
   database: 'ticsproyect',
@@ -22,13 +21,13 @@ const pool = new Pool({
 
 app.post("/app/registro", async (req, res) => {
   try {
-    const { username, email, Password } = req.body;
+    const { username, email, password } = req.body;
     const salt = await bcrypt.genSalt();
-    const password = await bcrypt.hash(Password, salt);
+    const hashedPassword = await bcrypt.hash(password, salt);
 
     pool.query(
       "INSERT INTO users (username, email, password) VALUES ($1, $2, $3) RETURNING *",
-      [username, email, password],
+      [username, email, hashedPassword],
       (error, results) => {
         if (error) {
           throw error;
@@ -44,14 +43,14 @@ app.post("/app/registro", async (req, res) => {
 
 app.post("/login", async (req, res) => {
   try {
-    const { Email, Password } = req.body;
-    const users = await pool.query("SELECT * FROM users WHERE email = $1", [Email]);
+    const { email, password } = req.body;
+    const users = await pool.query("SELECT * FROM users WHERE email = $1", [email]);
     const userFound = users.rows[0];
 
     if (!userFound) {
       res.send("Email no encontrado");
     } else {
-      const passMatched = await bcrypt.compare(Password, userFound.password);
+      const passMatched = await bcrypt.compare(password, userFound.password);
       if (!passMatched) {
         return res.status(401).json({ error: "Contraseña incorrecta" });
       } else {
@@ -73,5 +72,4 @@ const port = process.env.PORT || 3000;
 
 server.listen(port, () => {
   console.log(`Servidor escuchando en http://${hostname}:${port}`);
-});
 });
