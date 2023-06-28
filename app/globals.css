@@ -161,6 +161,10 @@ a {
   color: #050801;
 }
 
+.dentro form a{
+width: 100%;
+}
+
 button.boton {
 
   display: flex;
@@ -180,6 +184,27 @@ button.boton {
   font-size: 1.2em;
 }
 
+
+a button.boton {
+
+  display: flex;
+  justify-content: center;
+  padding: 12px 17px;
+  background-color: #050801;
+  color: white;
+  font-weight: bold;
+  font-family: sans-serif;
+  border-radius: 8px;
+  letter-spacing: 4px;
+  overflow: hidden;
+  transition: 0.5s;
+  cursor: pointer;
+  width: 60%;
+  margin-top: 10px;
+  font-size: 1.2em;
+  margin-left: 20%;
+}
+
 .boton:hover {
   background: #1561f0;
   color: white;
@@ -188,6 +213,8 @@ button.boton {
     0 0 10px #1561f0,
     0 0 20px #1561f0;
 }
+
+
 
 /*FINAL DE LOS ESTILOS PARA EL LOGIN Y REGISTRO*/
 
@@ -233,6 +260,7 @@ div.home {
   transition: 0.5s;
   cursor: pointer;
   width: 15%;
+  min-width: 60px;
   margin-top: 10px;
   font-size: 1.4em;
 
@@ -401,22 +429,23 @@ h1.dispositivos {
   white-space: nowrap;
 }
 
-div.agregar{
+div.agregar {
   display: flex;
   flex-direction: row;
   align-items: baseline;
-  
+
 }
 
-button.Agregar-dispositivo{
-color: white;
-margin-left: 0;
-border-style: solid;
-border-radius: 5px;
-background-color: #1561f0;
-padding: 1%;
+button.Agregar-dispositivo {
+  color: white;
+  margin-left: 0;
+  border-style: solid;
+  border-radius: 5px;
+  background-color: #1561f0;
+  padding: 1%;
 }
-button.Agregar-dispositivo:hover{
+
+button.Agregar-dispositivo:hover {
   background-color: #1562f0c7;
 }
 
@@ -434,7 +463,7 @@ button.Agregar-dispositivo:hover{
 }
 
 
-.nuevo-dispositivo{
+.nuevo-dispositivo {
   display: flex;
   align-items: center;
   text-align: center;
@@ -447,16 +476,17 @@ button.Agregar-dispositivo:hover{
   border-radius: 10px;
 
 }
-.nuevo-dispositivo h2{
+
+.nuevo-dispositivo h2 {
   display: flex;
   margin-top: 0%;
 }
 
- img.luz{
+img.luz {
   margin-left: 0;
   width: 42px;
   height: 42px;
- }
+}
 
 .ajuste-dispositivo {
   display: flex;
@@ -468,17 +498,19 @@ button.Agregar-dispositivo:hover{
   width: 15%;
   background-color: #2b2b2b;
 }
-button.ajuste-dispositivo{
+
+button.ajuste-dispositivo {
   width: 100%;
   height: 100%;
 }
-.ajuste-dispositivo img{
+
+.ajuste-dispositivo img {
   width: 35px;
   height: 35px;
 }
 
 
-.ajuste-dispositivo h2{
+.ajuste-dispositivo h2 {
   font-size: 1rem;
 }
 
@@ -573,6 +605,7 @@ h1.alarmas {
   opacity: 0.6;
   white-space: nowrap;
 }
+
 .popup {
   position: fixed;
   top: 0;
@@ -584,6 +617,7 @@ h1.alarmas {
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.5);
 }
+
 .popup-content {
   position: relative;
   background-color: white;
@@ -605,48 +639,48 @@ h1.alarmas {
   margin-top: 10%;
 }
 
-  .popup h3{
-    margin-top: 20%;
-    font-size: 1.2rem;
-    font-weight: bold;
-  }
+.popup h3 {
+  margin-top: 20%;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
 
-  .boton-guardar{
-    border-style: solid;
-    border-width: 1px;
-    border-color: #1561f0;
-    border-radius: 10px;
-    padding: 1.2%;
-    background-color: #1561f0;
-    color: white;
-  }
-  .boton-guardar:hover{
-    background-color: #1562f0e0;
-  }
+.boton-guardar {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #1561f0;
+  border-radius: 10px;
+  padding: 1.2%;
+  background-color: #1561f0;
+  color: white;
+}
 
-  .nueva-alarma{
-    display: flex;
-    align-items: flex-start;
-    text-align: center;
-    flex-direction: column;
-    background-color: #1561f0;
-    width: 20%;
-    height: 20%;
-    margin-top: 2%;
-    margin-left: 2%;
-    border-radius: 10px;
-  }
-  .nueva-alarma h2{
+.boton-guardar:hover {
+  background-color: #1562f0e0;
+}
 
-  }
-  
-  .confirmar-cierre h2{
-    color: #000000;
-    font-weight: bold;
-    margin-top: 10%;
-  }
+.nueva-alarma {
+  display: flex;
+  align-items: flex-start;
+  text-align: center;
+  flex-direction: column;
+  background-color: #1561f0;
+  width: 20%;
+  height: 20%;
+  margin-top: 2%;
+  margin-left: 2%;
+  border-radius: 10px;
+}
 
-  .confirmar-cierre button{
+.nueva-alarma h2 {}
+
+.confirmar-cierre h2 {
+  color: #000000;
+  font-weight: bold;
+  margin-top: 10%;
+}
+
+.confirmar-cierre button {
   margin-top: 10%;
   padding: 2%;
   font-size: 1.2rem;
@@ -654,27 +688,29 @@ h1.alarmas {
   border-width: 1px;
   border-radius: 10px;
   width: 30%;
-  }
+}
 
 
-  .boton-confirmar{
-    color:white;
-    border-color:#1561f0;
-    background-color: #1561f0;
-  }
- .boton-confirmar:hover{
-    background-color: #1562f0d2;
-  }
+.boton-confirmar {
+  color: white;
+  border-color: #1561f0;
+  background-color: #1561f0;
+}
 
-  .boton-cancelar{
-    border-color: #df2828;
-    background-color: #df2828;
-    color:white;
-    margin-left: 10%;
-  }
-  .boton-cancelar:hover{
-    background-color: #df2828dc;
-  }
+.boton-confirmar:hover {
+  background-color: #1562f0d2;
+}
+
+.boton-cancelar {
+  border-color: #df2828;
+  background-color: #df2828;
+  color: white;
+  margin-left: 10%;
+}
+
+.boton-cancelar:hover {
+  background-color: #df2828dc;
+}
 
 
 /*FINAL DE LOS ESTILOS PARA ALARMAS*/
