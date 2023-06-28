@@ -1,0 +1,709 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* INICIO DE LOS ESTILOS PARA EL LOGIN Y REGISTRO*/
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #131313;
+  font-family: sans-serif;
+}
+
+main.datos {
+  width: 550px;
+  height: 650px;
+  background-color: #131313;
+  border-radius: 5%;
+}
+
+div.fuera {
+  display: flex;
+  width: 550px;
+  height: 650px;
+  margin: 0 auto;
+  background-color: #131313;
+  border-radius: 5%;
+  background: #1561f0;
+  color: #000000;
+  animation: sombra-movimiento 5s infinite;
+}
+
+@keyframes sombra-movimiento {
+  0% {
+    box-shadow: 0 0 5px #1561f0,
+      0 0 15px #1561f0,
+      0 0 25px #1561f0,
+      0 0 75px #1561f0;
+  }
+
+  15% {
+    box-shadow: 0 0 7px #1561f0,
+      0 0 20px #1561f0,
+      0 0 30px #1561f0,
+      0 0 90px #1561f0;
+  }
+
+  25% {
+    box-shadow: 0 0 9px #1561f0,
+      0 0 27px #1561f0,
+      0 0 45px #1561f0,
+      0 0 95px #1561f0;
+  }
+
+  30% {
+    box-shadow: 0 0 10px #1561f0,
+      0 0 25px #1561f0,
+      0 0 40px #1561f0,
+      0 0 100px #1561f0;
+  }
+
+  40% {
+    box-shadow: 0 0 11px #1561f0,
+      0 0 30px #1561f0,
+      0 0 50px #1561f0,
+      0 0 110px #1561f0;
+  }
+
+  50% {
+    box-shadow: 0 0 12px #1561f0,
+      0 0 35px #1561f0,
+      0 0 60px #1561f0,
+      0 0 130px #1561f0;
+  }
+
+  75% {
+    box-shadow: 0 0 10px #1561f0,
+      0 0 25px #1561f0,
+      0 0 40px #1561f0,
+      0 0 100px #1561f0;
+  }
+
+  85% {
+    box-shadow: 0 0 7px #1561f0,
+      0 0 20px #1561f0,
+      0 0 30px #1561f0,
+      0 0 90px #1561f0;
+  }
+
+  100% {
+    box-shadow: 0 0 5px #1561f0,
+      0 0 15px #1561f0,
+      0 0 25px #1561f0,
+      0 0 75px #1561f0;
+  }
+}
+
+div.dentro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  background-color: white;
+  width: 90%;
+  height: 90%;
+  margin: auto;
+  border-radius: 5%;
+}
+
+div.dentro form {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 90%;
+}
+
+input {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  padding: 1.5%;
+  width: 60%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border-color: #131313;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+
+  :focus {
+    outline: none;
+  }
+
+  ::placeholder {
+    color: #e8e8e8;
+  }
+
+
+}
+
+
+h1.datos {
+  margin-bottom: 20px;
+  font-size: 2em;
+  font-weight: bold;
+  color: #050801;
+}
+
+a {
+  margin-bottom: 20px;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #050801;
+}
+
+button.boton {
+
+  display: flex;
+  justify-content: center;
+  padding: 12px 17px;
+  background-color: #050801;
+  color: white;
+  font-weight: bold;
+  font-family: sans-serif;
+  border-radius: 8px;
+  letter-spacing: 4px;
+  overflow: hidden;
+  transition: 0.5s;
+  cursor: pointer;
+  width: 60%;
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+
+.boton:hover {
+  background: #1561f0;
+  color: white;
+  box-shadow: 0 0 1px #1561f0,
+    0 0 5px #1561f0,
+    0 0 10px #1561f0,
+    0 0 20px #1561f0;
+}
+
+/*FINAL DE LOS ESTILOS PARA EL LOGIN Y REGISTRO*/
+
+/*INICIO DE LOS ESTILOS PARA EL HOME*/
+
+
+main.Home {
+  height: 100%;
+  width: 100%;
+
+}
+
+div.home {
+  display: grid;
+  place-items: center;
+  margin-top: 20%;
+}
+
+
+/*PRUEBA*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.loginInicio,
+.registroInicio {
+  display: flex;
+  justify-content: center;
+  padding: 25px 30px;
+  background-color: #050801;
+  color: #1561f0;
+  font-weight: bold;
+  font-family: sans-serif;
+  border: solid;
+  border-color: #1561f0;
+  border-radius: 8px;
+  letter-spacing: 4px;
+  overflow: hidden;
+  transition: 0.5s;
+  cursor: pointer;
+  width: 15%;
+  margin-top: 10px;
+  font-size: 1.4em;
+
+}
+
+.loginInicio:hover,
+.registroInicio:hover {
+  background: #1561f0;
+  color: white;
+  box-shadow: 0 0 5px #1561f0,
+    0 0 25px #1561f0,
+    0 0 50px #1561f0,
+    0 0 200px #1561f0;
+}
+
+
+
+/*PRUEBA*/
+/*style={{backgroundImage: "url(/images/sunlight-3130638_1920.jpg)"}}
+/*FINAL DE LOS ESTILOS PARA EL HOME*/
+
+
+
+/*INICIO DE LOS ESTILOS PARA NAV*/
+
+nav.navegar {
+  margin-top: 60%;
+  width: 100%;
+
+}
+
+.nav-container {
+  background-color: #2b2b2b;
+  width: 10%;
+  height: 100vh;
+}
+
+div.img-container {
+  margin-top: 8px;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+div.img-container:hover {
+  background-color: #1561f0;
+}
+
+div.img-container img {
+  margin-left: 10px;
+  width: 33px;
+  height: 33px;
+
+}
+
+.lineas {
+  width: 33px;
+  height: 33px;
+}
+
+h2 {
+  margin-left: 16px;
+  font-size: 0.85em;
+
+  color: white;
+  ;
+}
+
+div.partedeabajo {
+  margin-top: 230%;
+}
+
+button.ocultar {
+  color: white;
+}
+
+.nav-container {
+  transition: width 0.8s ease;
+}
+
+.nav-container.collapsed {
+  width: 3%;
+}
+
+.nav-container .navegar .img-container {
+  display: flex;
+  align-items: center;
+}
+
+.nav-container .navegar .img-container h2 {
+  margin-left: 5px;
+  font-size: 0.9em;
+  display: block;
+}
+
+.nav-container.collapsed .navegar .img-container h2 {
+  display: none;
+
+}
+
+.navegar.collapsed .img-container h2 {
+  display: none;
+}
+
+aside.secciones.collapsed {
+  width: 50px;
+}
+
+aside.secciones {
+  transition: width 0.3s ease;
+}
+
+
+/*FINAL DE LOS ESTILOS PARA NAV*/
+
+
+
+
+/*INICIO DE LOS ESTILOS PARA DISPOSITIVOS*/
+
+main.dispositivos {
+  display: flex;
+  width: 95%;
+}
+
+section.section-dispositivos {
+  width: 100%;
+}
+
+div.dispositivos {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+h1.dispositivos {
+  font-size: 4rem;
+  margin-left: 2%;
+  margin-top: 2%;
+  color: white;
+}
+
+.container-dispositivos {
+  display: flex;
+  align-items: baseline;
+}
+
+.agregar-dispositivo {
+  margin-left: 20px;
+  position: relative;
+}
+
+.container-dispositivos .agregar-dispositivo:hover::after {
+  content: "Agregar dispositivo";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #000;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  opacity: 0.6;
+  white-space: nowrap;
+}
+
+div.agregar{
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  
+}
+
+button.Agregar-dispositivo{
+color: white;
+margin-left: 0;
+border-style: solid;
+border-radius: 5px;
+background-color: #1561f0;
+padding: 1%;
+}
+button.Agregar-dispositivo:hover{
+  background-color: #1562f0c7;
+}
+
+.section-dispositivos h2 {
+  font-size: 1.5em;
+  margin-left: 2%;
+  margin-top: 2%;
+}
+
+.section-dispositivos img {
+  width: 25px;
+  height: 25px;
+  margin-left: 2%;
+  margin-top: 2%;
+}
+
+
+.nuevo-dispositivo{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  background-color: #1561f0;
+  width: 50%;
+  height: 8%;
+  margin-top: 2%;
+  margin-left: 2%;
+  border-radius: 10px;
+
+}
+.nuevo-dispositivo h2{
+  display: flex;
+  margin-top: 0%;
+}
+
+ img.luz{
+  margin-left: 0;
+  width: 42px;
+  height: 42px;
+ }
+
+.ajuste-dispositivo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: auto;
+  height: 100%;
+  width: 15%;
+  background-color: #2b2b2b;
+}
+button.ajuste-dispositivo{
+  width: 100%;
+  height: 100%;
+}
+.ajuste-dispositivo img{
+  width: 35px;
+  height: 35px;
+}
+
+
+.ajuste-dispositivo h2{
+  font-size: 1rem;
+}
+
+
+
+
+/*FINAL DE LOS ESTILOS PARA DISPOSITIVOS*/
+
+
+
+
+/*INICIO DE LOS ESTILOS PARA ESTADISTICAS*/
+
+main.estadisticas {
+  display: flex;
+  width: 95%;
+}
+
+section.estadisticas {
+  width: 100%;
+}
+
+div.estadisticas {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+h1.estadisticas {
+  font-size: 4rem;
+  margin-left: 2%;
+  margin-top: 2%;
+  color: white;
+}
+
+/*FINAL DE LOS ESTILOS PARA ESTADISTICAS*/
+
+
+
+/*INICIO DE LOS ESTILOS PARA ALARMAS*/
+
+main.alarmas {
+  display: flex;
+  width: 95%;
+}
+
+section.alarmas {
+  width: 100%;
+
+}
+
+.alarmas h2 {
+  font-size: 1.5em;
+  margin-left: 2%;
+  margin-top: 2%;
+}
+
+div.alarmas {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+h1.alarmas {
+  font-size: 4rem;
+  margin-left: 2%;
+  margin-top: 2%;
+  color: white;
+}
+
+.container-alarma {
+  display: flex;
+  align-items: baseline;
+}
+
+.agregar-alarma {
+  margin-left: 20px;
+  position: relative;
+}
+
+.container-alarma .agregar-alarma:hover::after {
+  content: "Agregar alarma";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #000;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  opacity: 0.6;
+  white-space: nowrap;
+}
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.popup-content {
+  position: relative;
+  background-color: white;
+  padding: 20px;
+  border-radius: 4px;
+  text-align: center;
+  width: 30%;
+  height: 50%;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.seleccionar-hora {
+  display: flex;
+  margin-top: 10%;
+}
+
+  .popup h3{
+    margin-top: 20%;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  .boton-guardar{
+    border-style: solid;
+    border-width: 1px;
+    border-color: #1561f0;
+    border-radius: 10px;
+    padding: 1.2%;
+    background-color: #1561f0;
+    color: white;
+  }
+  .boton-guardar:hover{
+    background-color: #1562f0e0;
+  }
+
+  .nueva-alarma{
+    display: flex;
+    align-items: flex-start;
+    text-align: center;
+    flex-direction: column;
+    background-color: #1561f0;
+    width: 20%;
+    height: 20%;
+    margin-top: 2%;
+    margin-left: 2%;
+    border-radius: 10px;
+  }
+  .nueva-alarma h2{
+
+  }
+  
+  .confirmar-cierre h2{
+    color: #000000;
+    font-weight: bold;
+    margin-top: 10%;
+  }
+
+  .confirmar-cierre button{
+  margin-top: 10%;
+  padding: 2%;
+  font-size: 1.2rem;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  width: 30%;
+  }
+
+
+  .boton-confirmar{
+    color:white;
+    border-color:#1561f0;
+    background-color: #1561f0;
+  }
+ .boton-confirmar:hover{
+    background-color: #1562f0d2;
+  }
+
+  .boton-cancelar{
+    border-color: #df2828;
+    background-color: #df2828;
+    color:white;
+    margin-left: 10%;
+  }
+  .boton-cancelar:hover{
+    background-color: #df2828dc;
+  }
+
+
+/*FINAL DE LOS ESTILOS PARA ALARMAS*/
+
+
+
+
+/*INICIO DE LOS ESTILOS PARA CONFIG*/
+main.config {
+  display: flex;
+  width: 95%;
+}
+
+section.config {
+  width: 100%;
+}
+
+div.config {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+h1.config {
+  font-size: 4rem;
+  margin-left: 2%;
+  margin-top: 2%;
+  color: white;
+}
+
+
+/*FINAL DE LOS ESTILOS PARA CONFIG*/
