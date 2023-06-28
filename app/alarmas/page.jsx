@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import DateTimePicker from 'react-datetime-picker';
-import Nav from '/app/Nav';
+import Nav from '/app/nav';
 
 function Alarmas() {
     const [popupOpen, setPopupOpen] = useState(false);
