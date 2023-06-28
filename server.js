@@ -22,13 +22,13 @@ const pool = new Pool({
 
 app.post("/registro", async (req, res) => {
   try {
-    const { Username, Email, Password } = req.body;
+    const { username, email, Password } = req.body;
     const salt = await bcrypt.genSalt();
-    const passwordHashed = await bcrypt.hash(Password, salt);
+    const password = await bcrypt.hash(Password, salt);
 
     pool.query(
-      "INSERT INTO usuarios (name, email, password) VALUES ($1, $2, $3) RETURNING *",
-      [Username, Email, passwordHashed],
+      "INSERT INTO users (username, email, password) VALUES ($1, $2, $3) RETURNING *",
+      [username, email, password],
       (error, results) => {
         if (error) {
           throw error;
@@ -45,7 +45,7 @@ app.post("/registro", async (req, res) => {
 app.post("/login", async (req, res) => {
   try {
     const { Email, Password } = req.body;
-    const users = await pool.query("SELECT * FROM usuarios WHERE email = $1", [Email]);
+    const users = await pool.query("SELECT * FROM users WHERE email = $1", [Email]);
     const userFound = users.rows[0];
 
     if (!userFound) {
@@ -73,4 +73,5 @@ const port = process.env.PORT || 3000;
 
 server.listen(port, () => {
   console.log(`Servidor escuchando en http://${hostname}:${port}`);
+});
 });
