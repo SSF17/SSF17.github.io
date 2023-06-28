@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'ProyectoTic'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_9E433E0CCF82458D9E162EEEC624BD32 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_438FBDF6F3814D829DD484E5CE3601DB }}
           package: .
