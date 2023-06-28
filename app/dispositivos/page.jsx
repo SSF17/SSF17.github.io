@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import Nav from '../Nav';
+import Nav from 'app/Nav';
 
 function Dispositivos() {
   const [dispositivos, setDispositivos] = useState([]);
