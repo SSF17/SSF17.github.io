@@ -18,7 +18,10 @@ function LoginPage() {
             <Link href="/registro">
               ¿Aún no tienes cuenta?
             </Link>
+            
+            <Link href="/dispositivos">
             <button type="submit" className="boton" >Iniciar sesión</button>
+            </Link>
           </form>
         </div>
       </div>
