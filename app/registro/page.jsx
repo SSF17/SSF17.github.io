@@ -15,7 +15,7 @@ function RegisterPage() {
     const password = formData.get("contrasena");
 
     try {
-      const response = await axios.post("/registro", { name, email, password });
+      const response = await axios.post("/app/registro", { name, email, password });
       setMessage(response.data.message);
     } catch (error) {
       console.error("Error en el servidor", error);
